@@ -25,7 +25,8 @@ config = {
         'pynsive==0.2.7',
         'PyYAML==4.2b4',
         'redis==3.2',
-        'shellescape==3.4.1'
+        'shellescape==3.4.1',
+        'uWSGI==2.0.18'
     ],
     'packages': ['scoring_engine'],
     'scripts': [],

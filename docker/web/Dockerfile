@@ -12,6 +12,6 @@ USER engine
 
 COPY bin/web /app/bin/web
 
-CMD ["./wait-for-container.sh", "bootstrap", "/app/bin/web"]
+CMD ["./wait-for-container.sh", "bootstrap", "uwsgi", "--socket", ":5000", "--wsgi-file", "bin/web", "--master", "--processes", "4", "--threads", "2", "--stats", "0.0.0.0:9191", "--stats-http"]
 
 EXPOSE 5000
